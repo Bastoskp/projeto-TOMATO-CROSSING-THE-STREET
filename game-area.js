@@ -16,7 +16,7 @@ ctx.fillRect(0, 550, 1200, 600);
 ctx.beginPath();
 ctx.moveTo(0, 290);
 ctx.lineTo(1200, 290);
-ctx.strokeStyle = "white";
+ctx.strokeStyle = "#feffa7";
 ctx.lineWidth = 10;
 ctx.stroke();
 
