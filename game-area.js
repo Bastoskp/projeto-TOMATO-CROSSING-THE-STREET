@@ -56,5 +56,3 @@ for (i = 0; i < 201; i++) {
   ctx.fillRect(1 + i * 20, 505, 8, 1);
 }
 //fim faixas da rua
-
-//inicio player

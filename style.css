@@ -1,4 +1,4 @@
-body {
+/*body {
   margin: 5;
   padding: 0;
   background-color: darkslategray;
@@ -9,4 +9,17 @@ canvas {
   max-width: 100%;
   max-height: 100%;
   border: 1px solid black;
+}*/
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
+
+.placar {
+  position: absolute;
+  top: 2%;
+  left: 25%;
+  font: 18px Archivo;
+  color: #00000099;
