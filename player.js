@@ -2,7 +2,7 @@
 
 class Player1 {
   constructor() {
-    this.x = 150;
+    this.x = 180;
     this.y = 550;
     const img = new Image();
     img.addEventListener("load", () => {
