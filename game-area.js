@@ -28,31 +28,25 @@ ctx.closePath();
 
 //faixas da rua
 for (i = 0; i < 201; i++) {
-  ctx.fillRect(1 + i * 20, 95, 8, 1);
+  ctx.fillRect(1 + i * 20, 110, 8, 1);
 }
 
 for (i = 0; i < 201; i++) {
-  ctx.fillRect(1 + i * 20, 145, 8, 1);
+  ctx.fillRect(1 + i * 20, 170, 8, 1);
 }
 
 for (i = 0; i < 201; i++) {
-  ctx.fillRect(1 + i * 20, 195, 8, 1);
+  ctx.fillRect(1 + i * 20, 230, 8, 1);
 }
 
 for (i = 0; i < 201; i++) {
-  ctx.fillRect(1 + i * 20, 245, 8, 1);
+  ctx.fillRect(1 + i * 20, 370, 8, 1);
+}
+for (i = 0; i < 201; i++) {
+  ctx.fillRect(1 + i * 20, 430, 8, 1);
+}
+for (i = 0; i < 201; i++) {
+  ctx.fillRect(1 + i * 20, 490, 8, 1);
 }
 
-for (i = 0; i < 201; i++) {
-  ctx.fillRect(1 + i * 20, 355, 8, 1);
-}
-for (i = 0; i < 201; i++) {
-  ctx.fillRect(1 + i * 20, 405, 8, 1);
-}
-for (i = 0; i < 201; i++) {
-  ctx.fillRect(1 + i * 20, 455, 8, 1);
-}
-for (i = 0; i < 201; i++) {
-  ctx.fillRect(1 + i * 20, 505, 8, 1);
-}
 //fim faixas da rua
