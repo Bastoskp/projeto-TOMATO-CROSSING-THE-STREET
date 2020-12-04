@@ -3,6 +3,7 @@ let ctx = canvas.getContext("2d");
 
 const myGameArea = {
   car1: [],
+  frames: 0,
   start: function () {
     this.interval = setInterval(updateGameArea, 20);
   },
@@ -14,7 +15,12 @@ const myGameArea = {
 function updateGameArea() {
   myGameArea.clear();
   drawRoad();
+  updateCar();
   player.draw();
+  for (let i = 0; i < myGameArea.car1.length; i += 1) {
+    myGameArea.car1[i].move();
+    myGameArea.car1[i].draw();
+  }
   car.move();
   car2.move();
   car3.move();
@@ -31,6 +37,24 @@ function updateGameArea() {
   car6.draw();
   car7.draw();
   car8.draw();
+}
+
+function updateCar() {
+  myGameArea.frames += 1;
+  if (myGameArea.frames % 190 === 0) {
+    myGameArea.car1.push(new Car(1125, 58, 3, "right"));
+  }
+  if (myGameArea.frames % 250 === 0) {
+    myGameArea.car1.push(new Car(1125, 116, 2.25, "right"));
+  }
+
+  if (myGameArea.frames % 150 === 0) {
+    myGameArea.car1.push(new Car(1125, 174, 5, "right"));
+  }
+
+  if (myGameArea.frames % 190 === 0) {
+    myGameArea.car1.push(new Car(1125, 232, 1.5, "right"));
+  }
 }
 
 function drawRoad() {
@@ -93,5 +117,11 @@ document.addEventListener("keydown", (e) => {
   }
   if (e.keyCode === 40) {
     player.moveDown();
+  }
+  if (e.keyCode === 39) {
+    player.moveRight();
+  }
+  if (e.keyCode === 37) {
+    player.moveLeft();
   }
 });
