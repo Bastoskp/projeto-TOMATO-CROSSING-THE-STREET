@@ -13,9 +13,11 @@ class Player1 {
     });
     img.src = "./imagens/ator-1.png";
   }
+
   draw() {
     ctx.drawImage(this.img, this.x, this.y, this.width, this.height);
   }
+
   moveUp() {
     if (this.y > 0) {
       this.y -= this.speed;
@@ -34,6 +36,21 @@ class Player1 {
   moveLeft() {
     if (this.x < 1200) {
       this.x -= this.speed;
+    }
+  }
+  detectColision(cars) {
+    for (let i = 0; i < cars.length; i += 1) {
+      if (
+        this.x < cars[i].x + cars[i].width &&
+        this.x + this.width > cars[i].x &&
+        this.y < cars[i].y + cars[i].height &&
+        this.y + this.height > cars[i].y
+      ) {
+        console.log("bateu");
+        if (detectColision(player)) {
+          stopGame();
+        }
+      }
     }
   }
 }

@@ -1,7 +1,10 @@
 body {
   margin: 20;
   padding: 0;
-  background-color: darkslategray;
+  background-color: rgb(88, 83, 83);
+  /* background-image: url("./imagens/atari.png");
+  background-repeat: no-repeat;
+  background-position: right;*/
 }
 
 canvas {
