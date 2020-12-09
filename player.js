@@ -46,10 +46,9 @@ class Player1 {
         this.y < cars[i].y + cars[i].height &&
         this.y + this.height > cars[i].y
       ) {
-        console.log("bateu");
-        if (detectColision(player)) {
-          stopGame();
-        }
+        // console.log("bateu");
+        backToStart();
+        runOver();
       }
     }
   }

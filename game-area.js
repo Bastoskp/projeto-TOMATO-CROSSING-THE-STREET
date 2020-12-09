@@ -1,3 +1,8 @@
+let button = document.getElementById("start-btn");
+button.addEventListener("click", () => {
+  myGameArea.start();
+});
+
 let canvas = document.getElementById("my-canvas");
 let ctx = canvas.getContext("2d");
 
@@ -5,11 +10,23 @@ const myGameArea = {
   car1: [],
   frames: 0,
   score: 0,
+  lives: 3,
   start: function () {
     this.interval = setInterval(updateGameArea, 20);
   },
   clear: () => {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
+  },
+  stop: () => {
+    // console.log("stop");
+    clearInterval(this.interval);
+  },
+  checkLives: () => {
+    // console.log("checklives");
+    if (myGameArea.lives <= 0) {
+      // console.log("morreu");
+      gameOver(); // chamar game over
+    }
   },
 };
 
@@ -17,13 +34,27 @@ function updateGameArea() {
   myGameArea.clear();
   drawRoad();
   updateCar();
-
+  myGameArea.checkLives();
   player.detectColision(myGameArea.car1);
   player.draw();
   for (let i = 0; i < myGameArea.car1.length; i += 1) {
     myGameArea.car1[i].move();
     myGameArea.car1[i].draw();
   }
+}
+function backToStart() {
+  player.y = 555;
+}
+
+function runOver() {
+  myGameArea.lives -= 1;
+  // console.log(myGameArea.lives);
+}
+
+function gameOver() {
+  console.log("teste");
+  myGameArea.stop(); //mandar parar o jogo
+  //mostrar a tela de game over
 }
 
 function updateCar() {
@@ -118,7 +149,7 @@ function drawRoad() {
   //fim faixas da rua
 }
 
-myGameArea.start();
+//myGameArea.start();
 
 document.addEventListener("keydown", (e) => {
   if (e.keyCode === 38) {
@@ -134,29 +165,3 @@ document.addEventListener("keydown", (e) => {
     player.moveLeft();
   }
 });
-
-/*function stopGame() {
-  clearInterval(intervalId);
-  ctx.clearRect(0, 0, canvas.width, canvas.height);
-  ctx.fillStyle = "black";
-  ctx.fillRect(0, 0, canvas.width, canvas.height);
-  ctx.font = "40px sans-serif";
-  ctx.fillStyle = "red";
-  ctx.fillText("GAME OVER", canvas.width / 2 - 131, canvas.height / 2 - 20);
-}
-
-function updateScore() {
-  const score = Math.floor(frames / 5);
-  ctx.font = "22px sans-serif";
-  ctx.fillStyle = "black";
-  ctx.fillText(`SCORE: ${score}`, 50, 50);
-}
-
-// checa condiçoes de fim de jogo
-  function checkGameOver() {
-    for (let i = 0; i < myGameArea.myObstacles.length; i += 1) {
-      // se o jogador bateu num obstáculo OU saiu dos limites de borda
-      
-    }
-  }
-*/

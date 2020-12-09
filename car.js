@@ -7,12 +7,12 @@ class Car {
     this.width = 60;
     this.height = 40;
     this.speed = speed;
-    const img = new Image();
-    img.addEventListener("load", () => {
-      this.img = img;
-      this.draw();
-    });
-    img.src = image;
+    this.img = new Image();
+    // img.addEventListener("load", () => {
+    //   this.img = img;
+    //   //  this.draw();
+    // });
+    this.img.src = image;
   }
 
   draw() {
