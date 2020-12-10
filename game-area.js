@@ -57,6 +57,8 @@ function gameOver() {
   //mostrar a tela de game over
 }
 
+function addPoints() {}
+
 function updateCar() {
   myGameArea.frames += 1;
   if (myGameArea.frames % 190 === 0) {

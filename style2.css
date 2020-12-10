@@ -1,23 +1,23 @@
 body {
-  margin: ;
-  padding: 0;
   background-image: url(./imagens/fundo-atari.jpg);
+  max-width: 100%;
+  max-height: 100%;
+  background-size: cover;
+  background-repeat: repeat;
+  display: flex;
+}
 
+video {
   position: absolute;
   top: 50%;
   left: 50%;
-  min-width: 50%;
-  min-height: 50%;
+  min-width: 65%;
+  min-height: 65%;
   width: auto;
   height: auto;
   z-index: -100;
   transform: translateX(-60%) translateY(-60%);
-  
+  background: url("./imagens/ator-1.png") no-repeat;
   background-size: cover;
   transition: 1s opacity;
-
-canvas {
-  max-width: 100%;
-  max-height: 100%;
-  border-radius: 40;
 }
