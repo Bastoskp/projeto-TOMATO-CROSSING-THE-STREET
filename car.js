@@ -5,7 +5,7 @@ class Car {
     this.x = x;
     this.y = y;
     this.width = 60;
-    this.height = 40;
+    this.height = 35;
     this.speed = speed;
     this.img = new Image();
     // img.addEventListener("load", () => {

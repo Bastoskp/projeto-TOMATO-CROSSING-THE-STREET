@@ -3,15 +3,15 @@
 class Player1 {
   constructor() {
     this.x = 180;
-    this.y = 555;
+    this.y = 550;
     this.speed = 15;
-    this.width = 50;
-    this.height = 40;
+    this.width = 75;
+    this.height = 52;
     const img = new Image();
     img.addEventListener("load", () => {
       this.img = img;
     });
-    img.src = "./imagens/ator-1.png";
+    img.src = "./imagens/tomate1.png";
   }
 
   draw() {
@@ -46,6 +46,7 @@ class Player1 {
         this.y < cars[i].y + cars[i].height &&
         this.y + this.height > cars[i].y
       ) {
+        // somColision.play();
         // console.log("bateu");
         backToStart();
         runOver();
