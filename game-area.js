@@ -153,40 +153,50 @@ function gameOver() {
 function updateCar() {
   myGameArea.frames += 1;
   if (myGameArea.frames % 190 === 0) {
-    myGameArea.car1.push(new Car(1125, 58, 3, "right", "/imagens/carro-1.png"));
+    myGameArea.car1.push(
+      new Car(1125, 58, 3, "right", "./imagens/carro-1.png")
+    );
   }
   if (myGameArea.frames % 150 === 0) {
     myGameArea.car1.push(
-      new Car(1125, 118, 2.5, "right", "/imagens/carro-5.png")
+      new Car(1125, 118, 2.5, "right", "./imagens/carro-5.png")
     );
   }
 
   if (myGameArea.frames % 100 === 0) {
     myGameArea.car1.push(
-      new Car(1125, 174, 5, "right", "/imagens/carro-8.png")
+      new Car(1125, 174, 5, "right", "./imagens/carro-8.png")
     );
   }
 
   if (myGameArea.frames % 300 === 0) {
     myGameArea.car1.push(
-      new Car(1125, 232, 1.5, "right", "/imagens/carro-10.png")
+      new Car(1125, 232, 1.5, "right", "./imagens/carro-10.png")
     );
   }
 
   if (myGameArea.frames % 100 === 0) {
-    myGameArea.car1.push(new Car(20, 335, 5.5, "left", "/imagens/carro-3.png"));
+    myGameArea.car1.push(
+      new Car(20, 335, 5.5, "left", "./imagens/carro-3.png")
+    );
   }
 
   if (myGameArea.frames % 150 === 0) {
-    myGameArea.car1.push(new Car(20, 390, 4.5, "left", "/imagens/carro-6.png"));
+    myGameArea.car1.push(
+      new Car(20, 390, 4.5, "left", "./imagens/carro-6.png")
+    );
   }
 
   if (myGameArea.frames % 300 === 0) {
-    myGameArea.car1.push(new Car(20, 450, 1.5, "left", "/imagens/carro-7.png"));
+    myGameArea.car1.push(
+      new Car(20, 450, 1.5, "left", "./imagens/carro-7.png")
+    );
   }
 
   if (myGameArea.frames % 190 === 0) {
-    myGameArea.car1.push(new Car(20, 505, 3.5, "left", "/imagens/carro-9.png"));
+    myGameArea.car1.push(
+      new Car(20, 505, 3.5, "left", "./imagens/carro-9.png")
+    );
   }
 }
 
