@@ -3,11 +3,13 @@ button.addEventListener("click", () => {
   myGameArea.start();
 });
 
-// const restartGame = document.querySelector(".restart");
-// function restart() {
-//   location.reload();
-// }
-// restartGame.addEventListener("click", restart);
+// restart
+const restartGame = document.querySelector(".restart");
+
+const restart = () => {
+  location.reload();
+};
+restartGame.addEventListener("click", restart);
 
 let divCanvas = document.getElementById("canvas");
 let divIntro = document.getElementById("intro");
@@ -15,9 +17,8 @@ let divIntro = document.getElementById("intro");
 let canvas = document.getElementById("my-canvas");
 let ctx = canvas.getContext("2d");
 
-let bestScore;
-data = parseInt(localStorage.getItem(`bestScore`));
-bestScore = isNaN(data) ? 0 : data;
+let data = parseInt(localStorage.getItem(`bestScore`));
+let bestScore = isNaN(data) ? 0 : data;
 
 let colidiu = document.getElementById("audio1");
 const somColision = new Audio();
@@ -69,7 +70,7 @@ const myGameArea = {
       // this.score ++
       // this.score += 1
 
-      player.y = 548;
+      player.y = 546;
     }
   },
 
@@ -125,9 +126,7 @@ function updateGameArea() {
   somTrilha.play();
   myGameArea.atravessouARua(player);
   myGameArea.checkLives();
-
   setBestScore();
-
   player.detectColision(myGameArea.car1);
   player.draw();
   for (let i = 0; i < myGameArea.car1.length; i += 1) {
@@ -138,7 +137,7 @@ function updateGameArea() {
 }
 
 function backToStart() {
-  player.y = 552;
+  player.y = 546;
 }
 
 function runOver() {
@@ -175,7 +174,7 @@ function updateCar() {
   }
 
   if (myGameArea.frames % 100 === 0) {
-    myGameArea.car1.push(new Car(20, 330, 5.5, "left", "/imagens/carro-3.png"));
+    myGameArea.car1.push(new Car(20, 335, 5.5, "left", "/imagens/carro-3.png"));
   }
 
   if (myGameArea.frames % 150 === 0) {

@@ -3,7 +3,7 @@
 class Player1 {
   constructor() {
     this.x = 180;
-    this.y = 548;
+    this.y = 546;
     this.speed = 15;
     this.width = 75;
     this.height = 52;

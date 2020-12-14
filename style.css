@@ -68,11 +68,19 @@ body {
   /* opacity: 0.8; */
 }
 
+#start-btn {
+  border: 1px solid yellow;
+  position: absolute;
+  top: 95%;
+  left: 113%;
+}
+
 .restart {
-  display: none;
-  font-size: 1.5rem;
-  width: 40%;
-  margin-bottom: -10px;
+  border: 2px solid white;
+  position: absolute;
+  top: 100%;
+  left: 114%;
+  /* display: none; */
 }
 
 /* .text-box {
